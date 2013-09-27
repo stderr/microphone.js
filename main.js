@@ -10,12 +10,11 @@ requirejs.config({
 
 require(['jquery','microphone'], function($, microphone) {
   var Microphone = microphone.create();
-  
+
   Microphone.addCommand({
     patterns: [new RegExp("display", "i")],
     callback: function(mic, command) {
       $("#" + command.args[0]).fadeIn();
-      mic.done();
     }
   });
 
@@ -23,18 +22,16 @@ require(['jquery','microphone'], function($, microphone) {
     patterns: [new RegExp("hide", "i")],
     callback: function(mic, command) {
       $("#" + command.args[0]).fadeOut();
-      mic.done();
     }
   });
 
   $('#btn-start').click(function() {
-    Microphone.turn("on");
+    Microphone.on();
   });
 
   $('#btn-stop').click(function() {
-    Microphone.turn("off");
+    Microphone.off();
   });
 
-  window.Microphone = Microphone;
 });
 
