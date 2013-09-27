@@ -10,8 +10,8 @@ requirejs.config({
 
 require(['jquery','microphone'], function($, microphone) {
   var Microphone = microphone.create();
-
-  Microphone.add_command({
+  
+  Microphone.addCommand({
     patterns: [new RegExp("display", "i")],
     callback: function(mic, command) {
       $("#" + command.args[0]).fadeIn();
@@ -19,7 +19,7 @@ require(['jquery','microphone'], function($, microphone) {
     }
   });
 
-  Microphone.add_command({
+  Microphone.addCommand({
     patterns: [new RegExp("hide", "i")],
     callback: function(mic, command) {
       $("#" + command.args[0]).fadeOut();
@@ -34,5 +34,7 @@ require(['jquery','microphone'], function($, microphone) {
   $('#btn-stop').click(function() {
     Microphone.turn("off");
   });
+
+  window.Microphone = Microphone;
 });
 
