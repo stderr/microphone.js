@@ -14,7 +14,6 @@ require(['jquery','microphone'], function($, microphone) {
   Microphone.add_command({
     patterns: [new RegExp("display", "i")],
     callback: function(mic, command) {
-      console.log(command.args[0]);
       $("#" + command.args[0]).fadeIn();
       mic.done();
     }
