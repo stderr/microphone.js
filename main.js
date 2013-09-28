@@ -9,10 +9,9 @@ requirejs.config({
 });
 
 require(['jquery','microphone'], function($, microphone) {
-
   var Microphone = microphone.create();
-  // Examples:
 
+  // Examples:
   // Control the DOM with your voice!
   Microphone.addCommand({
     patterns: [new RegExp("display", "i")],
