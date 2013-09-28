@@ -1,5 +1,5 @@
 # microphone.js
-microphone.js is a simple library that allows you to use the new SpeechRecognition library
+microphone.js is a simple library that allows you to use the new [Web Speech API](https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html) 
 (currently only available in Chrome) to recognize and act on voice commands in JavaScript.
 
 ## Playground
@@ -12,7 +12,7 @@ $ python -m SimpleHTTPServer
 ```
 
 ## Usage
-To instantiate the main `Microphone` object, use the `create` function.
+To instantiate the main `Microphone` object, use the `create` function:
 ```javascript
 require(['microphone'], function(microphone){
   var Microphone = microphone.create();
@@ -26,7 +26,7 @@ Microphone.on();
 
 The primary usage of microphone.js is through the `addCommand` function. This takes two main arguments:
 `patterns`, which is assumed to be an array of regular expressions, and the `callback`, which is
-the code that will be run if any of the patterns specified match the voice input.
+the code that will be run if any of the patterns specified match the voice input:
 
 ```javascript
 Microphone.addCommand({
