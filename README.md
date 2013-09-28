@@ -12,6 +12,18 @@ $ python -m SimpleHTTPServer
 ```
 
 ## Usage
+To instantiate the main `Microphone` object, use the `create` function.
+```javascript
+require(['microphone'], function(microphone){
+  var Microphone = microphone.create();
+});
+```
+
+To activate voice processing, use the `on` function:
+```javascript
+Microphone.on();
+```
+
 The primary usage of microphone.js is through the `addCommand` function. This takes two main arguments:
 `patterns`, which is assumed to be an array of regular expressions, and the `callback`, which is
 the code that will be run if any of the patterns specified match the voice input.
