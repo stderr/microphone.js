@@ -14,7 +14,7 @@ require(['jquery','microphone'], function($, microphone) {
   // Examples:
   Microphone.addCommand({
     patterns: [new RegExp("dog", "i")],
-    callback: function(mic, command) {
+    callback: function() {
       alert("no, cats!");
     }
   });
