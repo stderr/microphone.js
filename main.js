@@ -12,6 +12,13 @@ require(['jquery','microphone'], function($, microphone) {
   var Microphone = microphone.create();
 
   // Examples:
+  Microphone.addCommand({
+    patterns: [new RegExp("dog", "i")],
+    callback: function(mic, command) {
+      alert("no, cats!");
+    }
+  });
+
   // Control the DOM with your voice!
   Microphone.addCommand({
     patterns: [new RegExp("display", "i")],
