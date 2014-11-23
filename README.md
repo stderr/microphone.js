@@ -2,7 +2,7 @@
 microphone.js is a simple library that allows you to use the new [Web Speech API](https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html) 
 (currently only available in Chrome) to recognize and act on voice commands in JavaScript.
 
-## Playground
+## How to use
 Clone this repository, and spin up a simple web server to serve index.html and the JavaScript.
 
 ```
